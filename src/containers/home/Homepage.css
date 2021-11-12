@@ -1,0 +1,27 @@
+.movies-list .single-movie {
+  display: flex;
+  max-height: 320px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.movies-list .single-movie .movie-embeded {
+  flex: 1 0 50%;
+  max-width: 50%;
+  padding-right: 20px;
+}
+
+.movies-list .single-movie .movie-info .movie-title {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: red;
+}
+
+.movies-list .single-movie .movie-info .movie-shared span {
+  font-weight: 600;
+}
+
+.movies-list .single-movie .movie-info .movie-description p {
+  font-style: italic;
+}

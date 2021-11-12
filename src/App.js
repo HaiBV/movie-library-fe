@@ -11,18 +11,22 @@ import './App.css';
 
 function App() {
   return (
-    <Provider store={store}>
-      <Router>
-        <>
-          <Navbar />
-          <Alert />
-          <Routes>
-            <Route exact path='/' element={<Homepage />} />
-            <Route exact path='/share' element={<ShareMovie />} />
-          </Routes>
-        </>
-      </Router>
-    </Provider>
+    <div className='app'>
+      <Provider store={store}>
+        <Router>
+          <>
+            <Navbar />
+            <Alert />
+            <div className='main-content'>
+              <Routes>
+                <Route exact path='/' element={<Homepage />} />
+                <Route exact path='/share' element={<ShareMovie />} />
+              </Routes>
+            </div>
+          </>
+        </Router>
+      </Provider>
+    </div>
   );
 }
 

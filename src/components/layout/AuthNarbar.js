@@ -13,12 +13,14 @@ const AuthNarbar = () => {
   };
 
   return (
-    <div>
+    <div className='user-info'>
       {`Welcome ${user?.email}`}
-      <Link to='/share' className='btn btn-primary my-1'>
-        Share
+      <Link to='/share' className='btn btn-primary'>
+        Share a movie
       </Link>
-      <input type='button' className='btn btn-primary' value='Logout' onClick={handleLogout} />
+      <button type='button' className='btn btn-primary' onClick={handleLogout}>
+        Logout
+      </button>
     </div>
   );
 };

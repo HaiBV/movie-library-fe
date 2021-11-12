@@ -17,12 +17,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className='navbar bg-dark'>
-      <Link to='/'>
-        <h1>
-          <i className='fas fa-code' /> Funny Movies
-        </h1>
-      </Link>
+    <nav className='navbar'>
+      <h1>
+        <Link to='/'>
+          <img src='./logo192.png' alt='' /> Funny Movies
+        </Link>
+      </h1>
       {!loading && <>{isAuthenticated ? <AuthNarbar /> : <GuestNarbar />}</>}
     </nav>
   );

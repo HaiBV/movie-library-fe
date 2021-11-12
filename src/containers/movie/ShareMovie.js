@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addMovie } from 'actions/movie.action';
+import './ShareMovie.css';
 
-const ShareMovie = (props) => {
+const ShareMovie = () => {
   const dispatch = useDispatch();
 
   const [formData, setFormData] = useState({
@@ -21,12 +22,18 @@ const ShareMovie = (props) => {
   };
 
   return (
-    <div>
+    <div className='movie'>
+      <div className='title'>Share a Youtube movie</div>
       <form className='form' onSubmit={(e) => onSubmit(e)}>
         <div className='form-group'>
+          <label htmlFor='url'>Youtube URL:</label>
           <input type='text' placeholder='' name='url' value={url} onChange={(e) => onChange(e)} required />
         </div>
-        <input type='submit' className='btn btn-primary' value='Share' />
+        <div className='form-group'>
+          <button type='submit' className='btn btn-primary'>
+            Share
+          </button>
+        </div>
       </form>
     </div>
   );
