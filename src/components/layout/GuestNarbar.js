@@ -32,7 +32,7 @@ const GuestNarbar = (props) => {
     <div className='user-info'>
       <form onSubmit={(e) => onSubmit(e)}>
         <input type='email' placeholder='Email Address' name='email' value={email} onChange={(e) => onChange(e)} required />
-        <input type='password' placeholder='Password' name='password' value={password} onChange={(e) => onChange(e)} />
+        <input type='password' placeholder='Password' name='password' value={password} onChange={(e) => onChange(e)} required />
         <button type='submit' className='btn btn-primary'>
           Login / Register
         </button>

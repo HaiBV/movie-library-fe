@@ -18,7 +18,9 @@ const ShareMovie = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch(addMovie(formData));
+    if (formData.url !== '') {
+      dispatch(addMovie(formData));
+    }
   };
 
   return (
