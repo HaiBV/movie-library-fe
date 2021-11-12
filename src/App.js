@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 import Navbar from './components/layout/Navbar';
+import Alert from './components/layout/Alert';
 import Landing from './components/layout/Landing';
 import './App.css';
 
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <>
           <Navbar />
+          <Alert />
           <Routes>
             <Route exact path='/' element={<Landing />} />
           </Routes>
