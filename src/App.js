@@ -5,7 +5,8 @@ import store from './store';
 
 import Navbar from './components/layout/Navbar';
 import Alert from './components/layout/Alert';
-import Landing from './components/layout/Landing';
+import Homepage from './containers/home/Homepage';
+import ShareMovie from './containers/movie/ShareMovie';
 import './App.css';
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
           <Navbar />
           <Alert />
           <Routes>
-            <Route exact path='/' element={<Landing />} />
+            <Route exact path='/' element={<Homepage />} />
+            <Route exact path='/share' element={<ShareMovie />} />
           </Routes>
         </>
       </Router>
